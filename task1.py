@@ -16,7 +16,6 @@ for the database when the pet is instantiated
 Methods:
 display() - should show the name of the pet and type followed by their breed and owner
 
-
 Main block should have a menu that has the following options:
 1. Enter a new pet
 2. Retrieve a pet
