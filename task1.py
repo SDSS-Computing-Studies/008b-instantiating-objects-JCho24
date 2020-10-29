@@ -84,13 +84,12 @@ class vet:
     birthdate = None
 
     def __init__(self):
-        if option == 1:
-            print("\n")
-            self.animal = input("Enter the animal: ")
-            self.breed = input("Enter the breed: ")
-            self.name = input("Enter the name: ")
-            self.owner = input("Enter the owner: ")
-            self.birthdate = input("Enter the birthdate: ")
+        print("\n")
+        self.animal = input("Enter the animal: ")
+        self.breed = input("Enter the breed: ")
+        self.name = input("Enter the name: ")
+        self.owner = input("Enter the owner: ")
+        self.birthdate = input("Enter the birthdate: ")
 
     def display(self):
         output = str(self.name) + " \n" + str(self.animal) + " \n" + str(self.breed) + " owned by " + str(self.owner)
@@ -108,10 +107,10 @@ def main():
         print("3. Exit")
 
         option = int(input(""))    
-        return option
 
         if option == 1:
-            vets.append(vet())
+            x = vet()
+            vets.append(x)
 
         elif option == 2:
             rPet = input("Enter pet's name: ")
@@ -119,9 +118,11 @@ def main():
             for i in range(0,length):
                 name=vets[i].name
                 if rPet == name:
-                    self.display()
+                    vets[i].display()
                     
+        elif option == 3:
+            print("Exiting...")
+            break
+    
                     
-
-
 main()
